@@ -1,16 +1,14 @@
-# provider
+# provider 정리 노트
 
-A new Flutter project.
+## Provider 패키지와의 비교점
+- Provider 패키지에서는 provider가 Widget으로 정의되었기 때문에 Flutter에서만 사용이 가능했다.
+- Riverpod 패키지에서는 provider가 Dart object이기 때문에 Flutter외에 Dart App에서도 사용이 가능하다.
 
-## Getting Started
+- Provider 패키지에서는 동일한 타입의 Provider를 사용하는 데에 제약이 존재했다.
+(Type이 같은 provider의 경우 위젯트리 상 가까운 provider만 참조할 수 있었음)
 
-This project is a starting point for a Flutter application.
+- build callback에서는 절대 `read()`를 사용하지 말아야한다.
 
-A few resources to get you started if this is your first Flutter project:
+consumer widget을 사용하는 경우 Consumer보다 편리하지만, rebuild 범위가 커질 수 있음을 주의
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- family provider는 argument를 하나만 받을 수 있다는 단점이 있다.

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:provider/pages/basic/basic_provider.dart';
 
 class BasicPage extends StatelessWidget {
   const BasicPage({super.key});
@@ -9,8 +11,17 @@ class BasicPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Provider'),
       ),
-      body: const Center(
-        child: Text('Provider'),
+      body: Center(
+        child: Consumer(
+          builder: (context, ref, child) {
+            final hello = ref.watch(helloProvider);
+            // final world = ref.watch(worldProvider);
+            return Text(
+              '$hello ',
+              style: Theme.of(context).textTheme.headlineLarge,
+            );
+          },
+        ),
       ),
     );
   }

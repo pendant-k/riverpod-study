@@ -12,3 +12,6 @@
 consumer widget을 사용하는 경우 Consumer보다 편리하지만, rebuild 범위가 커질 수 있음을 주의
 
 - family provider는 argument를 하나만 받을 수 있다는 단점이 있다.
+
+## Provider
+- 주로 computed state에 사용한다(다른 형태의 provider와 결합하여 사용하는 편임)

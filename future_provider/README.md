@@ -18,4 +18,5 @@
 ```
 만약 refresh하여 받아온 새로운 값은 상관없는 상황이라면 `invalidate()`를 사용하도록 하자.
 
+- `invalidate()`로 데이터를 다시 가져오면, `AsyncLoading<T>`가 아니라 `AsyncData<T>`에 `isLoading` prop이 담긴 obj가 리턴된다.
 

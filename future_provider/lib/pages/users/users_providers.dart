@@ -19,6 +19,9 @@ part 'users_providers.g.dart';
 
 @riverpod
 FutureOr<List<User>> userList(UserListRef ref) async {
+  ref.onDispose(() {
+    print('UserListRef disposed');
+  });
   final dio = ref.read(dioProvider);
   final response = await dio.get('/users');
   final data = response.data;

@@ -10,6 +10,7 @@ class UserListPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final userList = ref.watch(userListProvider);
+    print(userList);
 
     return Scaffold(
       appBar: AppBar(

@@ -4,6 +4,7 @@
 --- 
 ## NotifierProvider
 [Notifier Provider Doc](https://github.com/pendant-k/riverpod-study/blob/main/docs/notifierProvider.md)
+
 **State Shape case study**
 State Shape에 대한 추가적인 스터디 및 고민이 필요함
 (`initial`, `loading`, `success`, `failure`)

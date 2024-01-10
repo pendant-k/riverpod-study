@@ -7,6 +7,7 @@
 
 **State Shape case study**
 State Shape에 대한 추가적인 스터디 및 고민이 필요함
+
 (`initial`, `loading`, `success`, `failure`)
 
 

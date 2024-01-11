@@ -1,13 +1,17 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:logger/logger.dart';
 
-class Logger extends ProviderObserver {
+class CustomObserver extends ProviderObserver {
+  // public variable of class
+  static var logger = Logger();
+
   @override
   void didAddProvider(
     ProviderBase<Object?> provider,
     Object? value,
     ProviderContainer container,
   ) {
-    print('''
+    logger.d('''
 {
   "provider": "${provider.name ?? provider.runtimeType} is initialized",
   "value exposed": "$value"
@@ -21,7 +25,7 @@ class Logger extends ProviderObserver {
     ProviderBase<Object?> provider,
     ProviderContainer container,
   ) {
-    print('''
+    logger.d('''
 {
   "provider": "${provider.name ?? provider.runtimeType} disposed"
 }
@@ -36,7 +40,7 @@ class Logger extends ProviderObserver {
     Object? newValue,
     ProviderContainer container,
   ) {
-    print('''
+    logger.d('''
 {
   "provider": "${provider.name ?? provider.runtimeType} updated",
   "previous value": "$previousValue",

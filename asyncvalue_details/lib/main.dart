@@ -1,3 +1,4 @@
+import 'package:asyncvalue_details/observer/custom_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -7,8 +8,11 @@ import 'widgets/custom_button.dart';
 
 void main() {
   runApp(
-    const ProviderScope(
-      child: MyApp(),
+    ProviderScope(
+      observers: [
+        CustomObserver(),
+      ],
+      child: const MyApp(),
     ),
   );
 }

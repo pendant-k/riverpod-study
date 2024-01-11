@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.4.5
+  logger: ^2.0.2+1
   riverpod_annotation: ^2.3.0
 
 dev_dependencies:

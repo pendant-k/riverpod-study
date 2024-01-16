@@ -46,7 +46,6 @@ class ProductRepository {
       if (response.statusCode != 200) {
         throw 'Fail to fetch product with $id';
       }
-
       final product = Product.fromJson(response.data);
 
       return product;
